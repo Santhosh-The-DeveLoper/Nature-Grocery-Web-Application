@@ -12,8 +12,8 @@ const AuthForm = ({ onClose, onLoginSuccess, onForgotPasswordClick }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const url = isLogin
-      ? 'http://localhost:5000/api/auth/login'
-      : 'http://localhost:5000/api/auth/register';
+      ? 'https://nature-grocery-web-application.onrender.com/api/auth/login'
+      : 'https://nature-grocery-web-application.onrender.com/api/auth/register';
 
     try {
       const res = await fetch(url, {
