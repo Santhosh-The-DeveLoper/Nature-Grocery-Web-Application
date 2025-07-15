@@ -17,7 +17,7 @@ const Orders = ({ onClose }) => {
           return;
         }
 
-        const res = await fetch('http://localhost:5000/api/orders/user', {
+        const res = await fetch('https://nature-grocery-web-application.onrender.com/api/orders/user', {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`,
@@ -48,7 +48,7 @@ const Orders = ({ onClose }) => {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/orders/${orderId}`, {
+      const res = await fetch(`https://nature-grocery-web-application.onrender.com/api/orders/${orderId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
