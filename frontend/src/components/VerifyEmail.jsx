@@ -8,7 +8,7 @@ const VerifyEmail = () => {
     const token = url.split('/verify/')[1];
 
     if (token) {
-      fetch(`http://localhost:5000/api/auth/verify/${token}`)
+      fetch(`https://nature-grocery-web-application.onrender.com/api/auth/verify/${token}`)
         .then(res => res.json())
         .then(data => {
           if (data.message === 'Email verified successfully') {
