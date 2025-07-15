@@ -14,7 +14,7 @@ connectDB();
 // Middleware
 app.use(cors(
   {
-    origin: ['http://localhost:3000'],
+    origin: ['https://nature-grocery-web-application.vercel.app/'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
