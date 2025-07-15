@@ -50,7 +50,7 @@ function Navbar({ openAuthForm, user, onLogout, onShowOrders }) {
     };
 
     try {
-      const res = await fetch('http://localhost:5000/api/orders/create-order', {
+      const res = await fetch('https://nature-grocery-web-application.onrender.com/api/orders/create-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
