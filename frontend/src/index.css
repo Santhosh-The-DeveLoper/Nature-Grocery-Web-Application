@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #000;
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@keyframes toast {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.animate-toast {
+  animation: toast 5s ease-in-out;
+}
+
+
+
+.animate-on-scroll {
+  opacity: 1;
+  transition: transform 0.8s ease-out;
+}
+
+
+.animate-on-scroll.show {
+  animation: fadeSlideUp 1s ease-out;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.animate-left.show {
+  animation: fadeSlideLeft 1s ease-out;
+}
+
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.animate-right.show {
+  animation: fadeSlideRight 1s ease-out;
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.flip-bounce {
+  transform: rotateY(90deg) scale(0.6);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.8s ease;
+  will-change: transform, opacity;
+}
+
+.flip-bounce.animate {
+  transform: rotateY(0deg) scale(1);
+  opacity: 1;
+}
+
+
+
+.float-rotate {
+  transform: translateY(60px) rotateX(30deg);
+  opacity: 0;
+  transition: transform 0.9s ease, opacity 0.9s ease;
+  will-change: transform, opacity;
+}
+
+.float-rotate.active {
+  transform: translateY(0) rotateX(0);
+  opacity: 1;
+}
+
+@keyframes popBounceIn {
+  0% {
+    transform: scale(0.8) translateY(50px);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05) translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.pop-bounce {
+  opacity: 1; 
+  transform: translateY(50px);
+}
+
+.pop-bounce.animate {
+  animation: popBounceIn 0.8s ease-out;
+}
+
+
+@keyframes flipBounce {
+  0% {
+    transform: rotateY(90deg) scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: rotateY(-20deg) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(0deg) scale(1);
+  }
+}
+
+.flip-bounce {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.3s ease-out;
+}
+
+.flip-bounce.animate {
+  animation: flipBounce 0.7s ease-out forwards;
+}
