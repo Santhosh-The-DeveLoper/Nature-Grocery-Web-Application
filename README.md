@@ -59,8 +59,6 @@
 - Local Storage (User session handling)
 
 ### 🧰 Backend
-- Python (Flask Framework)
-- Flask-CORS (for cross-origin communication)
 - PyMongo (MongoDB integration)
 - JWT Authentication (Login & Register)
 - RESTful API architecture
