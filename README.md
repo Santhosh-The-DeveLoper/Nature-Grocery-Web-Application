@@ -116,8 +116,6 @@ pip install -r requirements.txt
 
 #### ✅ Backend Libraries
 
-- `Flask`
-- `Flask-CORS`
 - `PyMongo`
 - `python-dotenv`
 - `bcrypt`
