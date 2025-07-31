@@ -1,6 +1,6 @@
 # 🛒 NatureGrocery - Full Stack Grocery Shopping Web App
 
-**NatureGrocery** is a comprehensive full-stack grocery shopping website built using **React.js**, **Tailwind CSS**, **Flask**, and **MongoDB**. It offers users a smooth, mobile-friendly interface to explore categories, add items to a cart, and place orders with ease.
+**NatureGrocery** is a comprehensive full-stack grocery shopping website built using **React.js**, **Tailwind CSS**, and **MongoDB**. It offers users a smooth, mobile-friendly interface to explore categories, add items to a cart, and place orders with ease.
 
 ---
 
